@@ -1,5 +1,7 @@
 package kaio.helloworld.kotlin
 
+import org.jetbrains.annotations.NotNull
+
 fun hello(){
     println("Hello, World!")
 }
@@ -66,6 +68,32 @@ fun main(){
         d = 2
     }
     println(d)
+
+    //Null Safety
+
+    //Null can not be a value of a non-null type String
+    val nullable: String? = "You can keep a null here"
+    val neverNull: String = "This can`t be null"
+
+    fun strLength(str: String?): Int{
+        return  str?.length ?: 0
+    }
+
+    println(nullable + " its size is " + strLength(nullable))
+    println(neverNull + " its size is " + strLength(neverNull))
+
+    fun describeString(maybeString: String?): String{
+        if(maybeString != null && maybeString.length > 0){
+            return "String of length ${maybeString.length}"
+        } else {
+            return "Empty or null string"
+        }
+    }
+
+    describeString(null)
+    describeString("")
+    describeString("Kaio Rapanos")
+
 
 
 }
