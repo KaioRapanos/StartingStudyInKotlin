@@ -19,6 +19,11 @@ fun sum(x: Int, y: Int): Int {
 
 fun multiply(x: Int, y: Int) = x * y
 
+//Class
+class Customer
+
+class Contact(val id: Int, var email: String)
+
 fun main(){
 
     hello()
@@ -95,5 +100,11 @@ fun main(){
     describeString("Kaio Rapanos")
 
 
+    val customer = Customer()
+    val contact = Contact(1, "maryjane@gmail.com")
+
+    println("${contact.id}  ${contact.email}")
+    contact.email = "jane@gmail.com"
+    println("${contact.id}  ${contact.email}")
 
 }
