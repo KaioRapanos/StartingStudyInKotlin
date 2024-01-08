@@ -48,6 +48,24 @@ fun main(){
 
     log("Hello !", "Sou Kaio", "Muito Prazer")
 
+    var a: String = "initial"
+    println(a)
+    a = "final"
+    println(a)
+    val b: Int = 1 //val cannot be reassigned
+    val c = 3      //val cannot be reassigned
+    println(b)
+    println(c)
+
+    fun someCondition() = true
+
+    val d: Int
+    if (someCondition()) {
+        d = 1
+    } else {
+        d = 2
+    }
+    println(d)
 
 
 }
