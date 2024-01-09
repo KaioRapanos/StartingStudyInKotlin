@@ -41,6 +41,8 @@ class MutableStack<E>(vararg items: E) {
     override fun toString() = "MutableStack(${elements.joinToString()})"
 }
 
+fun <E> mutableStackOf(vararg elements: E) = MutableStack(*elements)
+
 fun main(){
 
     hello()
@@ -137,6 +139,9 @@ fun main(){
         println("pop: ${stack.pop()}")
         println(stack)
     }
+
+    val stack1 = mutableStackOf(0.62, 3.14, 2.7)
+    println(stack1)
 
 
 }
