@@ -78,6 +78,18 @@ fun main() {
         println("x is not in range from 6 to 10")
     }
 
+    //Equality Checks
+    val authors = setOf("Shakespeare", "Hemingway", "Twain")
+    val writers = setOf("Twain","Shakespeare","Hemingway")
+
+    println(authors == writers)
+    println(authors === writers)
+
+    //Conditional Expression
+    fun max(a: Int, b: Int) = if (a > b) a else b
+
+    println(max(99, -42))
+
 }
 
 class Animal(val name: String)
