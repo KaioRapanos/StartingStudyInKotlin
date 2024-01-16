@@ -59,6 +59,18 @@ fun main(){
 
     println("name = ${user.component1()}")
 
+    //enum
+
+    val state = State.RUNNUNG
+    val message = when(state){
+        State.IDLE -> "It`s idle"
+        State.RUNNUNG -> "It`s running"
+        State.FINISHED -> "It`s finished"
+    }
+    println(message)
+
+
+
 
 }
 
@@ -71,4 +83,9 @@ data class User(val name: String, val id: Int){
 
 
 //Enum Classes
+enum class State{
+    IDLE, RUNNUNG, FINISHED
+}
+
 //Sealed Classes
+
